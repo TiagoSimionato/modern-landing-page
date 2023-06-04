@@ -18,7 +18,7 @@ O teste consiste em reproduzir uma landing page que foi prototipada utilizando a
   
 ### O que iremos avaliar:
   - Organização e qualidade do código;
-  - Mensagens e mudanças nos commits;
+  - Mensagens de mudanças nos commits;
   - Composição/reutilização de componentes;
   - Metricas Web Vitals;
   - Acessibilidade;
