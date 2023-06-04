@@ -20,7 +20,7 @@ O teste consiste em reproduzir uma landing page que foi prototipada utilizando a
   - Organização e qualidade do código;
   - Mensagens de mudanças nos commits;
   - Composição/reutilização de componentes;
-  - Metricas Web Vitals;
+  - Métricas Web Vitals;
   - Acessibilidade;
   - A escolha de cada tech da stack;
 
