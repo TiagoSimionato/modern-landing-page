@@ -6,16 +6,16 @@ import Input from 'components/Input';
 
 export function Banner() {
   return (
-    <div className='p-4 flex flex-col gap-4'>
-      <div className='relative w-375 h-540 box-border'>
-        <img className='absolute' src={bannerImg1} alt="TODO" />
-        <img className='absolute right-0 top-100' src={bannerImg2} alt="TODO" />
+    <section className='p-4 pb-72p flex flex-col gap-4 items-center'>
+      <div className='relative w-375p h-448p box-border'>
+        <img className='absolute left-18p top-6' src={bannerImg1} alt="Black Woman posing to take a picture" />
+        <img className='absolute right-18p top-28' src={bannerImg2} alt="Asian Woman posing to take a picture" />
       </div>
-      <h2 className='font-bold text-4xl'>Lörem <span className='text-blue'>ipsum</span> sars rigisk.</h2>
+      <h2 className='font-bold text-40p/[48px]'>Lörem <span className='text-blue'>ipsum</span> sars rigisk.</h2>
       <p className='leading-8 text-invblack capitalize'>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and.
       </p>
       <Input />
-    </div>
+    </section>
   );
 }
