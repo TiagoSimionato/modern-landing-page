@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Card({info}) {
+export function Card({info, customTitleStyle, customDescriptionStyle}) {
   const [currentImage, setImage] = useState(info.image);
 
   function activateHover() {
@@ -12,9 +12,33 @@ export function Card({info}) {
     setImage(info.image);
   }
 
+  const titleStyle = customTitleStyle ?
+    customTitleStyle : 
+    ' '
+  ;
+
+  const descriptionStyle = customDescriptionStyle ?
+  customDescriptionStyle : 
+  'leading-6 text-invblack w-155p capitalize'
+;
+
   return (
-    <>
-      <img onMouseEnter={() => activateHover()} onMouseLeave={() => deActivateHover()} src={currentImage} alt={info.description} />
-    </>
+    <div>
+      {info.title ? (
+        <h3 className={titleStyle}>{info.title}</h3>
+      ) : (
+        <></>
+      )}
+      {info.image ? (
+        <img onMouseEnter={() => activateHover()} onMouseLeave={() => deActivateHover()} src={currentImage} alt={info.alt} />
+      ) : (
+        <></>
+      )}
+      {info.description ? (
+        <p className={descriptionStyle}>{info.description}</p>
+      ) : (
+        <></>
+      )}
+    </div>
   );
 }

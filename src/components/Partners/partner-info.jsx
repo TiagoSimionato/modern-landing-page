@@ -15,38 +15,38 @@ import imageMicrosoft from 'assets/images/partners/microsoft.png';
 
 const partners = [
   {
-    "id": 1,
-    "name": "Spotify",
-    "image": imageSpotifyGray,
-    "imageHover": imageSpotify,
-    "description": "Spotify Logo"
+    id: 1,
+    name: "Spotify",
+    image: imageSpotifyGray,
+    imageHover: imageSpotify,
+    alt: "Spotify Logo"
   },
   {
-    "id": 2,
-    "name": "Uber",
-    "image": imageUberGray,
-    "imageHover": imageUber,
-    "description": "Uber Logo"
+    id: 2,
+    name: "Uber",
+    image: imageUberGray,
+    imageHover: imageUber,
+    alt: "Uber Logo"
   },
   {
-    "id":3,
-    "name": "Google",
-    "image": imageGoogleGray,
-    "imageHover": imageGoogle,
-    "description": "Google Logo"
+    id:3,
+    name: "Google",
+    image: imageGoogleGray,
+    imageHover: imageGoogle,
+    alt: "Google Logo"
   },
   {
-    "id": 4,
-    "name": "Shopify",
-    "image": imageShopifyGray,
-    "imageHover": imageShopify,
-    "description": "Shopify Logo"
+    id: 4,
+    name: "Shopify",
+    image: imageShopifyGray,
+    imageHover: imageShopify,
+    alt: "Shopify Logo"
   },  {
-    "id": 5,
-    "name": "Microsoft",
-    "image": imageMicrosoftGray,
-    "imageHover": imageMicrosoft,
-    "description": "Microsoft Logo"
+    id: 5,
+    name: "Microsoft",
+    image: imageMicrosoftGray,
+    imageHover: imageMicrosoft,
+    alt: "Microsoft Logo"
   }
 ]
 
