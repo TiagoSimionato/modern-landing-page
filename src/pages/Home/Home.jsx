@@ -1,4 +1,5 @@
 //Components
+import AboutUs from "components/AboutUs";
 import Banner from "components/Banner";
 import Benefits from "components/Benefits";
 import Partners from "components/Partners";
@@ -13,6 +14,7 @@ export function Home() {
       <Statistics />
       <Benefits />
       <Products />
+      <AboutUs />
     </>
   );
 }

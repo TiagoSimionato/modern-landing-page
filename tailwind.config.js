@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     colors: {
       'blue'       : '#3461FF',
+      'white'      : '#FFFFFF',
       'lightgray'  : '#F5F5F5',
       'darkgray'   : '#565656',
       'buttonbg'   : '#E5EBFF',
