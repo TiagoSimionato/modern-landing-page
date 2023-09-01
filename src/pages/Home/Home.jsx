@@ -2,6 +2,7 @@
 import Banner from "components/Banner";
 import Benefits from "components/Benefits";
 import Partners from "components/Partners";
+import Products from "components/Products";
 import Statistics from "components/Statistics";
 
 export function Home() {
@@ -11,6 +12,7 @@ export function Home() {
       <Partners />
       <Statistics />
       <Benefits />
+      <Products />
     </>
   );
 }

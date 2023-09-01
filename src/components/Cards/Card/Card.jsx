@@ -14,7 +14,7 @@ export function Card({info, customTitleStyle, customDescriptionStyle, width = ''
 
   const titleStyle = customTitleStyle ?
     customTitleStyle : 
-    'text-28p mt-6'
+    'text-28p mt-6 mb-4'
   ;
 
   const descriptionStyle = customDescriptionStyle ?
