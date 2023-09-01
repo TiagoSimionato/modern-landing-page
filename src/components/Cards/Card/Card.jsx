@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Card({info, customTitleStyle, customDescriptionStyle}) {
+export function Card({info, customTitleStyle, customDescriptionStyle, width = ''}) {
   const [currentImage, setImage] = useState(info.image);
 
   function activateHover() {
@@ -14,28 +14,33 @@ export function Card({info, customTitleStyle, customDescriptionStyle}) {
 
   const titleStyle = customTitleStyle ?
     customTitleStyle : 
-    ' '
+    'text-28p mt-6'
   ;
 
   const descriptionStyle = customDescriptionStyle ?
   customDescriptionStyle : 
-  'leading-6 text-invblack w-155p capitalize'
+  'leading-6 text-invblack capitalize m-auto'
 ;
 
   return (
     <div>
+      {info.image ? (
+        <img className="m-auto" onMouseEnter={() => activateHover()} onMouseLeave={() => deActivateHover()} src={currentImage} alt={info.alt} />
+      ) : (
+        <></>
+      )}
+      {info.svg ? //Not working
+        info.svg
+        : (
+        <></>
+      )}
       {info.title ? (
         <h3 className={titleStyle}>{info.title}</h3>
       ) : (
         <></>
       )}
-      {info.image ? (
-        <img onMouseEnter={() => activateHover()} onMouseLeave={() => deActivateHover()} src={currentImage} alt={info.alt} />
-      ) : (
-        <></>
-      )}
       {info.description ? (
-        <p className={descriptionStyle}>{info.description}</p>
+        <p className={`${descriptionStyle} ${width}`}>{info.description}</p>
       ) : (
         <></>
       )}

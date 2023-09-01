@@ -11,7 +11,7 @@ export function Statistics() {
         Lande telebelt. Nede kontragisk nisana. Dåvidening sobel. Kana posade. Ädosa. Mynde plande. Ödun ol. Nektig exogt. Rumun durade viplalingar. Nixa dosade. Fasov besat. Diasam mimining povengar. Kromiren teplanat. Självradikalisering. Autofahet dinibel. Virelig saling. Sys fase kroheten.
       </p>
 
-      <Cards className='flex flex-col gap-12 mt-9' items={statistics} customTitleStyle='font-semibold text-blue text-64p' />
+      <Cards className='flex flex-col gap-12 mt-9' width='w-155p' items={statistics} customTitleStyle='font-semibold text-blue text-64p' />
     </section>
   );
 }
