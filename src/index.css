@@ -27,4 +27,8 @@
   .rotate {
     transform: rotate(180deg);
   }
+
+  .bshadow {
+    box-shadow: 0 2px 0 0 rgba(38, 41, 48, 0.08) ;
+  }
 }

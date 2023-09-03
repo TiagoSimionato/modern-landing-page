@@ -3,6 +3,7 @@ import AboutUs from "components/AboutUs";
 import Banner from "components/Banner";
 import Benefits from "components/Benefits";
 import Collaborators from "components/Collaborators";
+import FAQ from "components/FAQ";
 import Footer from "components/Footer";
 import Partners from "components/Partners";
 import Products from "components/Products";
@@ -18,6 +19,7 @@ export function Home() {
       <Products />
       <AboutUs />
       <Collaborators />
+      <FAQ />
       <Footer />
     </>
   );
