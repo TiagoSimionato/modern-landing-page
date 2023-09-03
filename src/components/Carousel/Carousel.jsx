@@ -69,7 +69,7 @@ export function Carousel({items}) {
   }
 
   return (
-    <div className="absolute left-0">
+    <div className="relative left-neg16p">
       <ul className="
         flex
         gap-4
