@@ -9,9 +9,9 @@ export function Footer() {
       <img src={logo} alt="Soft Everywhere" className='w-[120px]' />
       <nav>
         <ul className='flex gap-8'>
-          <li><a href="https://www.instagram.com/"><Facebook /></a></li>
-          <li><a href="https://twitter.com/"><Twitter /></a></li>
-          <li><a href="https://www.facebook.com/"><Instagram /></a></li>
+          <li><a href="https://www.instagram.com/" aria-label='Instagram Website'><Instagram /></a></li>
+          <li><a href="https://twitter.com/" aria-label='Twitter Website'><Twitter /></a></li>
+          <li><a href="https://www.facebook.com/" aria-label='Facebook Website'><Facebook /></a></li>
         </ul>
       </nav>
     </footer>

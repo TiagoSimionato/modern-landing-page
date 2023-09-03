@@ -93,10 +93,10 @@ export function Carousel({items}) {
         )}
       </ul>
       <div className='px-4 py-6 flex justify-end gap-6'>
-        <Button OtherStyles={leftButton} onClick={scrollLeft}>
+        <Button OtherStyles={leftButton} onClick={scrollLeft} label='Scroll Carousel Left'>
           {leftButtonEnabled ? <EnabledArrowRight className='rotate' /> :  <DisabledArrowLeft />}
         </Button>
-        <Button OtherStyles={rightButton} onClick={scrollRight}>
+        <Button OtherStyles={rightButton} onClick={scrollRight} label='Scroll Carousel Right'>
           {rightButtonEnabled ? <EnabledArrowRight /> : <DisabledArrowLeft className='rotate' />}
         </Button>
       </div>

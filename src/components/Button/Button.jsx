@@ -1,4 +1,4 @@
-export function Button({children, OtherStyles, bg = '', onClick}) {
+export function Button({children, OtherStyles, bg = '', onClick, label}) {
   return (
     <button className={`
       inline
@@ -9,7 +9,7 @@ export function Button({children, OtherStyles, bg = '', onClick}) {
       justify-center
       ${bg}
       ${OtherStyles}
-    `} onClick={(event) => onClick(event)}>
+    `} onClick={(event) => onClick(event)} aria-label={label}>
       {children}
     </button>
   );

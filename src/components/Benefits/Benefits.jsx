@@ -4,7 +4,7 @@ import benefits from './benefits-info';
 
 export function Benefits() {
   return (
-    <section className="flex flex-col items-center gap-8 px-4 py-72p text-center">
+    <section id="vuv" className="flex flex-col items-center gap-8 px-4 py-72p text-center">
       <img src={benefitsImage} alt="Drawing with four buildings in ascending order" />
         <div>
           <h2 className="text-40p font-medium capitalize">Vuv jiheten.</h2>
