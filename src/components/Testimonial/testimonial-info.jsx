@@ -9,6 +9,7 @@ const collaborators = [
     job: 'Chief Manager',
     description: 'Use this section to describe your company and the products you offer. You could share your company’s story and details about why you are in business. ',
     image: amelia,
+    alt: 'Amelia Joseph Portrait',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const collaborators = [
     job: 'Chief Manager',
     description: 'Use this section to describe your company and the products you offer. You could share your company’s story and details about why you are in business. ',
     image: jacob,
+    alt: 'Jacob Joshua Portrait',
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ const collaborators = [
     job: 'Chief Manager',
     description: 'Use this section to describe your company and the products you offer. You could share your company’s story and details about why you are in business. ',
     image: jacobjo,
+    alt: 'Jacob Joshua Portrait',
   },
 ]
 

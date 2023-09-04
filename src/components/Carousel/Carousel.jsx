@@ -6,8 +6,18 @@ import Button from "components/Button";
 import CarouselItem from "./CarouselItem";
 import React, { useState } from 'react';
 
-
-export function Carousel({items}) {
+//TODO ACTIVE ITEM STYLE
+export function Carousel({
+    items,
+    title           = 'title',
+    subtitle        = 'subtitle',
+    description     = 'description',
+    image           = 'image',
+    alt             = 'alt',
+    showConstrols   = true,
+    style,
+    cardStyle
+  }) {
   const enabledButtonStyle = 'bg-blue';
   const disabledButtonStyle = 'bg-buttonbg';
 
@@ -69,37 +79,46 @@ export function Carousel({items}) {
   }
 
   return (
-    <div className="relative left-neg16p">
-      <ul className="
+    <div className="
+      relative
+      left-[neg16px]
+      md:left-[-32px]
+      w-full
+    ">
+      <ul className={`
         flex
-        gap-4
         relative
         overflow-auto
         snap-x
         snap-mandatory
         w-screen
         no-scrollbar
-      "
+        ${style}
+      `}
       onScroll={(event) => updateButton(event.target)}
       ref={ul}>
         {items.map(item =>
           <CarouselItem
             key={item.id}
-            title={item.name}
-            subtitle={item.job}
-            description={item.description}
-            image={item.image}
+            title={item[title]}
+            subtitle={item[subtitle]}
+            description={item[description]}
+            image={item[image]}
+            alt={item[alt]}
+            style={cardStyle}
           />
         )}
       </ul>
-      <div className='px-4 py-6 flex justify-end gap-6'>
-        <Button OtherStyles={leftButton} onClick={scrollLeft} label='Scroll Carousel Left'>
-          {leftButtonEnabled ? <EnabledArrowRight className='rotate' /> :  <DisabledArrowLeft />}
-        </Button>
-        <Button OtherStyles={rightButton} onClick={scrollRight} label='Scroll Carousel Right'>
-          {rightButtonEnabled ? <EnabledArrowRight /> : <DisabledArrowLeft className='rotate' />}
-        </Button>
-      </div>
+      {showConstrols ?
+        <div className='px-4 py-6 flex justify-end gap-6'>
+          <Button OtherStyles={leftButton} onClick={scrollLeft} label='Scroll Carousel Left'>
+            {leftButtonEnabled ? <EnabledArrowRight className='rotate' /> :  <DisabledArrowLeft />}
+          </Button>
+          <Button OtherStyles={rightButton} onClick={scrollRight} label='Scroll Carousel Right'>
+            {rightButtonEnabled ? <EnabledArrowRight /> : <DisabledArrowLeft className='rotate' />}
+          </Button>
+        </div>
+      : <></>}
     </div>
   );
 }

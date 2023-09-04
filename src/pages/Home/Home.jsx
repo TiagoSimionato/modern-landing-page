@@ -1,26 +1,24 @@
 //Components
 import AboutUs from "components/AboutUs";
 import Banner from "components/Banner";
-import Benefits from "components/Benefits";
-import Collaborators from "components/Collaborators";
-import FAQ from "components/FAQ";
-import Footer from "components/Footer";
+import HowItWorks from "components/HowItWorks";
+import Testimonial from "components/Testimonial";
+import Help from "components/Help";
 import Partners from "components/Partners";
-import Products from "components/Products";
-import Statistics from "components/Statistics";
+import OurWork from "components/OurWork";
+import Commitments from "components/Commitments";
 
 export function Home() {
   return (
     <>
       <Banner />
       <Partners />
-      <Statistics />
-      <Benefits />
-      <Products />
+      <Commitments />
+      <HowItWorks />
+      <OurWork />
       <AboutUs />
-      <Collaborators />
-      <FAQ />
-      <Footer />
+      <Testimonial />
+      <Help />
     </>
   );
 }

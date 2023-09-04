@@ -15,14 +15,14 @@ export function Header() {
   }
 
   return (
-    <header className='
+    <header className={`
       flex
       items-center
       justify-between
       px-4
       py-7
       relative
-    '>
+    `}>
       <img src={logo} alt="Soft Everywhere" className='w-[87px]' />
 
       <MenuButton onClick={changeMVisibility} />
@@ -38,8 +38,13 @@ export function Header() {
         pb-4
         font-medium
         capitalize
+
+
       `}>
-        <ul className='flex flex-col'>
+        <ul className='
+          flex
+          flex-col
+        '>
           <li className='p-6'><a href='#vuv'>Bende ajyvåsa.</a></li>
           <li className='p-6'><h3>Sutesm asonat.</h3></li>
           <li className='p-6'><h3>Ding pararat.</h3></li>

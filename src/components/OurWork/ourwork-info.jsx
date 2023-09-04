@@ -8,21 +8,21 @@ const products = [
     title: 'Apple',
     description: 'Use this section to describe your ',
     image: notebook,
-    alt: '',
+    alt: 'Apple notebook',
   },
   {
     id: 2,
     title: 'Coca-Cola',
     description: 'Use this section to describe your ',
     image: soda,
-    alt: '',
+    alt: 'Coca-Cola tin can',
   },
   {
     id: 3,
     title: 'Nike',
     description: 'Use this section to describe your ',
     image: shoes,
-    alt: '',
+    alt: 'Nike shoes',
   },
 ]
 
