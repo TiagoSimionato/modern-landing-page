@@ -1,3 +1,4 @@
+//TODO ANIMATIONS
 export function Help() {
   return (
     <section className="
@@ -21,6 +22,7 @@ export function Help() {
         bg-white
       " name="" id="">
         <option value="">Accordion title</option>
+        <option value="">Este conteúdo existe apenas para ser substituído pelo conteúdo que você precisar trabalhar. Para isso crie um componente local.</option>
       </select>
     </section>
   );

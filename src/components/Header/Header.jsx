@@ -1,27 +1,19 @@
 import logo from 'assets/images/LOGO.png';
 import Button from 'components/Button';
 import MenuButton from 'components/MenuButton';
-import { useState } from 'react';
 
-export function Header() {
-  const [menuVisibility, setMVisibility] = useState('hidden');
-
-  function changeMVisibility() {
-    if (menuVisibility === 'hidden') {
-      setMVisibility('');
-    } else {
-      setMVisibility('hidden');
-    }
-  }
-
+export function Header({changeMVisibility, menuVisibility}) {
   return (
     <header className={`
+      bg-invwhite
       flex
       items-center
       justify-between
       px-4
       py-7
-      relative
+      sticky
+      top-0
+      z-10
     `}>
       <img src={logo} alt="Soft Everywhere" className='w-[87px]' />
 
@@ -29,17 +21,17 @@ export function Header() {
 
       <nav className={`
         ${menuVisibility}
-        absolute
+        fixed
         top-[86px]
-        right-0
-        z-10
+        right-4
         w-[343px]
         bg-white
         pb-4
         font-medium
         capitalize
-
-
+        rounded
+        bshadow2
+        headerBorder
       `}>
         <ul className='
           flex

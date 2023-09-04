@@ -42,7 +42,6 @@ export function Partners() {
 
         md:flex-row
         md:flex-wrap
-        
         md:gap-x-44
         md:gap-y-16
       " items={partners}/>

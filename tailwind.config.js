@@ -12,7 +12,8 @@ module.exports = {
       'darkgray'   : '#565656',
       'buttonbg'   : '#E5EBFF',
       'partnersbg' : '#FAFAFA',
-      'invblack'  : 'rgba(0, 0, 0, 0.6)',
+      'invblack'   : 'rgba(0, 0, 0, 0.6)',
+      'invwhite'   : 'rgba(255, 255, 255, 0.95)',
     },
     fontFamily: {
       'poppings': 'Poppins , sans-serif',

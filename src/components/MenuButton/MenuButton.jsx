@@ -4,7 +4,7 @@ export function MenuButton({style, onClick}) {
   return (
     <div className={`flex gap-2 ${style}`}>
       <MenuIcon/>
-      <button onClick={onClick}>Menu</button>
+      <button id="menu" onClick={event => onClick(event)}>Menu</button>
     </div>
   );
 }
