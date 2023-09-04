@@ -81,7 +81,7 @@ export function Carousel({
   return (
     <div className="
       relative
-      left-[neg16px]
+      left-[-16px]
       md:left-[-32px]
       w-full
     ">
