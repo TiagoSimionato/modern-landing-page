@@ -81,9 +81,12 @@ export function Carousel({
   return (
     <div className="
       relative
-      left-[-16px]
-      md:left-[-32px]
       w-full
+      left-[-16px]
+
+      md:left-[-32px]
+
+      xl:left-[-100px]
     ">
       <ul className={`
         flex

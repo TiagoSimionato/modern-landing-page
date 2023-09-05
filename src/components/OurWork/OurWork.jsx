@@ -18,10 +18,22 @@ export function OurWork() {
 
       md:text-left
       md:px-8
+
+      xl:px-[100px]
+      xl:py-32
+      xl:text-center
+      xl:gap-14
     ">
       <div>
-        <h2 className="text-40p font-medium">Dikönde.</h2>
-        <p className="text-lg/[32px] text-invblack capitalize">
+        <h2 className="text-40p font-medium xl:mb-4">Dikönde.</h2>
+        <p className="
+          text-lg/[32px]
+          text-invblack
+          capitalize
+
+          xl:max-w-[830px]
+          xl:leading-[27px]
+        ">
           Religt. Tiledes. Kära. Automent. Öher. Plagåsam. Peda. Makropen. Nixa. Pän. Autoboligt. Plade. Dogon. Transtion.  Tisk. Debel. Trekaligen. Tisk. Debel. Trekaligen. Tisk. Debel. Trekaligen.
         </p>
       </div>
@@ -30,6 +42,10 @@ export function OurWork() {
         <Carousel
           items={products}
           showConstrols={false}
+
+          style={`
+            xl:justify-center
+          `}
           
           cardStyle='
             bg-white
