@@ -17,6 +17,8 @@ export function Partners() {
       md:block
       md:text-left
       md:px-8
+
+      xl:px-[100px]
     '>
       <h2 className="
         font-medium
@@ -44,6 +46,9 @@ export function Partners() {
         md:flex-wrap
         md:gap-x-44
         md:gap-y-16
+
+        xl:justify-between
+        xl:gap-x-0
       " items={partners}/>
     </section>
   );
