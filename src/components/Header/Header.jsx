@@ -14,10 +14,12 @@ export function Header({changeMVisibility, menuVisibility}) {
       sticky
       top-0
       z-10
+
+      xl:px-[100px]
     `}>
       <img src={logo} alt="Soft Everywhere" className='w-[87px]' />
 
-      <MenuButton onClick={changeMVisibility} />
+      <MenuButton style='xl:hidden' onClick={changeMVisibility} />
 
       <nav className={`
         ${menuVisibility}
@@ -32,16 +34,26 @@ export function Header({changeMVisibility, menuVisibility}) {
         rounded
         bshadow2
         headerBorder
+
+        xl:block
+        xl:bg-inv
+        xl:shadow-none
+        xl:border-0
+        xl:static
+        xl:w-fit
+        
       `}>
         <ul className='
           flex
           flex-col
+
+          xl:flex-row
         '>
           <li className='p-6'><a href='#vuv'>Bende ajyvåsa.</a></li>
           <li className='p-6'><h3>Sutesm asonat.</h3></li>
           <li className='p-6'><h3>Ding pararat.</h3></li>
           <li className='p-6'><h3>Teleska.</h3></li>
-          <li className='px-6 py-2.5'><Button OtherStyles='w-[126px] h-[52px] p-0 text-white' bg='bg-blue hover:bg-bluehover'>Try It Now</Button></li>
+          <li className='px-6 py-2.5'><Button OtherStyles='w-[126px] h-[52px] p-0 text-white xl:ml-[328px]' bg='bg-blue hover:bg-bluehover'>Try It Now</Button></li>
         </ul>
       </nav>
     </header>

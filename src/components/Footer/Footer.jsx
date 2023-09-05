@@ -17,6 +17,8 @@ export function Footer() {
       md:flex-row
       md:justify-between
       md:px-8
+      md:pt-[100px]
+      md:pb-[52px]
     '>
       <img src={logo} alt="Soft Everywhere" className='w-[120px]' />
       <nav>

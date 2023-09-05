@@ -12,6 +12,7 @@ module.exports = {
       'darkgray'   : '#565656',
       'buttonbg'   : '#E5EBFF',
       'partnersbg' : '#FAFAFA',
+      'inv'        : '#FAFAFA00',
       'invblack'   : 'rgba(0, 0, 0, 0.6)',
       'invwhite'   : 'rgba(255, 255, 255, 0.95)',
     },
@@ -33,6 +34,9 @@ module.exports = {
         '28p' : '28px',
         '40p' : '40px',
         '64p' : '64px',
+      },
+      screens: {
+        'xl' : '1440px',
       }
     }
   },
