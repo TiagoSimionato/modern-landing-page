@@ -14,6 +14,9 @@ export function Testimonial() {
 
       md:text-left
       md:px-8
+
+      xl:px-[100px]
+      xl:py-32
     ">
       <h2 className="
         text-40p
@@ -52,6 +55,9 @@ export function Testimonial() {
           md:first:ml-8
           md:last:mr-8
           md:w-[505px]
+
+          xl:first:ml-[100px]
+          xl:last:mr-[100px]
         `}
       />
     </section>

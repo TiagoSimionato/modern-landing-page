@@ -87,6 +87,9 @@ export function Carousel({
       md:left-[-32px]
 
       xl:left-[-100px]
+      xl:[&>div]:absolute
+      xl:[&>div]:top-[-120px]
+      xl:[&>div]:right-[-100px]
     ">
       <ul className={`
         flex

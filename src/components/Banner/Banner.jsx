@@ -41,6 +41,7 @@ export function Banner() {
 
         xl:w-[504px]
         xl:h-[692px]
+        md:right-24
       '>
         <img className='
           absolute

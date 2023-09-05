@@ -16,6 +16,7 @@ export function Header({changeMVisibility, menuVisibility}) {
       z-10
 
       xl:px-[100px]
+      xl:py-3
     `}>
       <img src={logo} alt="Soft Everywhere" className='w-[87px]' />
 
@@ -41,18 +42,19 @@ export function Header({changeMVisibility, menuVisibility}) {
         xl:border-0
         xl:static
         xl:w-fit
-        
+        xl:pb-0
       `}>
         <ul className='
           flex
           flex-col
 
           xl:flex-row
+          xl:items-center
         '>
-          <li className='p-6'><a href='#vuv'>Bende ajyvåsa.</a></li>
-          <li className='p-6'><h3>Sutesm asonat.</h3></li>
-          <li className='p-6'><h3>Ding pararat.</h3></li>
-          <li className='p-6'><h3>Teleska.</h3></li>
+          <li className='p-6 xl:py-0'><a href='#vuv'>Bende ajyvåsa.</a></li>
+          <li className='p-6 xl:py-0'><h3>Sutesm asonat.</h3></li>
+          <li className='p-6 xl:py-0'><h3>Ding pararat.</h3></li>
+          <li className='p-6 xl:py-0'><h3>Teleska.</h3></li>
           <li className='px-6 py-2.5'><Button OtherStyles='w-[126px] h-[52px] p-0 text-white xl:ml-[328px]' bg='bg-blue hover:bg-bluehover'>Try It Now</Button></li>
         </ul>
       </nav>
