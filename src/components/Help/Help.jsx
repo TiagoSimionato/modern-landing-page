@@ -12,6 +12,8 @@ export function Help() {
       text-center
 
       md:px-8
+
+      xl:px-[100px]
     ">
       <h2 className="font-semibold text-40p">FAQ</h2>
       <select className="

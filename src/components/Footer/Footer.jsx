@@ -19,6 +19,8 @@ export function Footer() {
       md:px-8
       md:pt-[100px]
       md:pb-[52px]
+
+      xl:px-[100px]
     '>
       <img src={logo} alt="Soft Everywhere" className='w-[120px]' />
       <nav>
