@@ -15,17 +15,19 @@ export function Help() {
 
       xl:px-[100px]
     ">
-      <h2 className="font-semibold text-40p">FAQ</h2>
-      <select className="
+      <label className="font-semibold text-40p" for='faq'>FAQ</label>
+      <div className="
         font-semibold
         w-full
         bshadow
         pb-6
         bg-white
-      " name="" id="">
-        <option value="">Accordion title</option>
-        <option value="">Este conteúdo existe apenas para ser substituído pelo conteúdo que você precisar trabalhar. Para isso crie um componente local.</option>
-      </select>
+      ">
+        <select className="w-full" name="" id="faq">
+          <option className="" value="">Accordion title</option>
+          <option value="">Este conteúdo existe apenas para ser substituído pelo conteúdo que você precisar trabalhar. Para isso crie um componente local.</option>
+        </select>
+      </div>
     </section>
   );
 }

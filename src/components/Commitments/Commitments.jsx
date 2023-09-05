@@ -64,8 +64,9 @@ export function Commitments() {
         md:[&>li]:min-w-[180px]
 
         xl:w-[50%]
+        xl:max-w-[820px]
         xl:shrink-0
-        md:gap-x-[138px]
+        xl:gap-x-[138px]
       ' width='w-155p' items={statistics} customTitleStyle='font-semibold text-blue text-64p' />
     </section>
   );

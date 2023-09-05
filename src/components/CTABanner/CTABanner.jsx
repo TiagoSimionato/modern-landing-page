@@ -13,7 +13,7 @@ export function CTABanner() {
 
       xl:px-[100px]
       xl:flex
-      xl:justify-between
+      xl:justify-around
     ">
       <h2 className="
         font-medium

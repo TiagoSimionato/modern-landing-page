@@ -49,4 +49,16 @@
   .headerBorder {
     border: 1px solid #a0a0a059;
   }
+
+  .tel-hidden {
+    visibility: hidden;
+    transition: 300ms;
+    background: transparent;
+  }
+
+  .tel:hover .tel-hidden {
+    visibility: visible;
+    display: inline;
+    @apply bg-buttonbg;
+  }
 }

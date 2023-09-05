@@ -67,6 +67,7 @@ export function HowItWorks() {
         md:gap-20
 
         xl:w-[50%]
+        xl:max-w-[840px]
         xl:gap-x-0
         xl:justify-between
       ' width='w-286p' items={benefits}/>

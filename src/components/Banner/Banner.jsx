@@ -24,8 +24,10 @@ export function Banner() {
       xl:h-fit
       xl:min-h-[802px]
       xl:px-[100px]
+      xl:pl-[7vw]
       xl:gap-6
       xl:justify-center
+      xl:items-start
     '>
       <div className='
         relative
@@ -41,7 +43,7 @@ export function Banner() {
 
         xl:w-[504px]
         xl:h-[692px]
-        md:right-24
+        md:right-[6.5vw]
       '>
         <img className='
           absolute
