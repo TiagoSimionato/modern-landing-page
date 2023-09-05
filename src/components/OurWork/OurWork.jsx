@@ -4,7 +4,6 @@ import products from "./ourwork-info";
 //Components
 import Cards from "components/Cards";
 
-//TODO RERENDER ON WIDTH CHANGE
 export function OurWork() {
   return (
     <section className="

@@ -6,7 +6,6 @@ import Button from "components/Button";
 import CarouselItem from "./CarouselItem";
 import React, { useState } from 'react';
 
-//TODO ACTIVE ITEM STYLE
 export function Carousel({
     items,
     title           = 'title',
@@ -28,19 +27,21 @@ export function Carousel({
   const [rightButtonEnabled, setEnableRB] = useState(true);
 
   function updateButton(element) {
-    const clientWidth = document.documentElement.clientWidth;
-    const scrollPercentage = element.scrollLeft / (element.scrollWidth - clientWidth);
-    //TODO SETACTIVE ITEM ONSCROLL
-    //console.log('mudanca pelo scroll: ' + parseInt(scrollPercentage * itemAmount));
-    //setActiveItem(parseInt(scrollPercentage * itemAmount));
-    if (scrollPercentage === 0) {
+    const clientWidth          = document.documentElement.clientWidth;
+    const scrollPercentage     = element.scrollLeft / (element.scrollWidth - clientWidth);
+    const firstItemScrollWidth = clientWidth / (itemAmount * 2);
+    const lastItemScrollWidth  = clientWidth * (1 - 1 / (itemAmount * 2));
+    
+    setActiveItem(parseInt(scrollPercentage * (itemAmount - 1)));
+    
+    if (scrollPercentage <= firstItemScrollWidth / clientWidth) {
       setLeftButton(disabledButtonStyle);
       setEnableLB(false);
     } else {
       setLeftButton(enabledButtonStyle);
       setEnableLB(true);
     }
-    if (scrollPercentage === 1) { //TODO FIX condition
+    if (scrollPercentage >= lastItemScrollWidth / clientWidth) { //Calcula se a porcentagem de scroll passou do último item ativo
       setRightButton(disabledButtonStyle);
       setEnableRB(false);
     } else {
@@ -68,7 +69,6 @@ export function Carousel({
     } else if (side === 'right') {
       newActiveItem = activeItem + 1;
     }
-
     const updateLeft  = side === 'left'  && newActiveItem >= 0;
     const updateRight = side === 'right' && newActiveItem < itemAmount;
     if (updateLeft || updateRight) {

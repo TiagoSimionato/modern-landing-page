@@ -1,4 +1,3 @@
-//TODO ANIMATIONS
 export function Help() {
   return (
     <section className="
@@ -15,7 +14,7 @@ export function Help() {
 
       xl:px-[100px]
     ">
-      <label className="font-semibold text-40p" for='faq'>FAQ</label>
+      <label className="font-semibold text-40p">FAQ</label>
       <div className="
         font-semibold
         w-full
