@@ -19,22 +19,30 @@ export function HowItWorks() {
 
       md:text-left
       md:items-start
-      md:p-8
+      md:px-8
+
+      xl:px-[100px]
+      xl:max-h-[1400px]
+      xl:flex-wrap
     ">
       <picture className="
         md:order-1
         md:h-[476px]
         md:w-[499px]
+
+        xl:w-[50%]
       ">
         <source media="(min-width: 768px)" srcSet={benefitsImg} />
         <img src={benefitsImgMobile} alt="Drawing with four buildings in ascending order" />
       </picture>
 
-      <div className="md:self-start">
+      <div className="md:self-start xl:w-[50%]">
         <h2 className="
           text-40p
           font-medium
           capitalize
+
+          xl:mb-4
         ">Vuv jiheten.</h2>
         <p className="
           text-lg/[32px]
@@ -57,6 +65,10 @@ export function HowItWorks() {
         md:flex-wrap
         md:[&>li>div>img]:m-0
         md:gap-20
+
+        xl:w-[50%]
+        xl:gap-x-0
+        xl:justify-between
       ' width='w-286p' items={benefits}/>
     </section>
   );
