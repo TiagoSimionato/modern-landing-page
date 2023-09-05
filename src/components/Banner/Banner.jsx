@@ -17,7 +17,15 @@ export function Banner() {
       md:w-[340px]
       md:flex-wrap
       md:h-[554px]
-      md:p-8
+      md:px-8
+
+      xl:w-fit
+      xl:max-w-[804px]
+      xl:h-fit
+      xl:min-h-[802px]
+      xl:px-[100px]
+      xl:gap-6
+      xl:justify-center
     '>
       <div className='
         relative
@@ -30,23 +38,44 @@ export function Banner() {
         md:absolute
         md:right-8
         md:w-[344px]
+
+        xl:w-[504px]
+        xl:h-[692px]
       '>
         <img className='
           absolute
           left-18p
           top-6
+          w-[172px]
+          h-[336px]
 
           md:left-0
+
+          xl:w-[278px]
+          xl:h-[542px]
+          xl:imgshadow
         ' src={bannerImg1} alt="Black Woman posing" />
         <img className='
           absolute
           right-18p
           top-28
+          w-[172px]
+          h-[336px]
 
           md:right-0
+          
+          xl:w-[278px]
+          xl:h-[542px]
+          xl:top-[150px]
+          xl:imgshadow
         ' src={bannerImg2} alt="Asian Woman posing" />
       </div>
-      <h2 className='font-medium text-40p/[48px]'>Lörem <span className='text-blue'>ipsum</span> sars rigisk.</h2>
+      <h2 className='
+        font-medium
+        text-40p/[48px]
+
+        xl:text-[86px]/[100px]
+      '>Lörem <span className='text-blue'>ipsum</span> sars rigisk.</h2>
       <p className='
         leading-8
         text-invblack
