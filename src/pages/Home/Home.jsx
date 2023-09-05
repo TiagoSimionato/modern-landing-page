@@ -1,5 +1,5 @@
 //Components
-import AboutUs from "components/AboutUs";
+import CTABanner from "components/CTABanner";
 import Banner from "components/Banner";
 import HowItWorks from "components/HowItWorks";
 import Testimonial from "components/Testimonial";
@@ -16,7 +16,7 @@ export function Home() {
       <Commitments />
       <HowItWorks />
       <OurWork />
-      <AboutUs />
+      <CTABanner />
       <Testimonial />
       <Help />
     </>

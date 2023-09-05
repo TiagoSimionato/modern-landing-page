@@ -1,4 +1,4 @@
-export function AboutUs() {
+export function CTABanner() {
   return (
     <section className="
       px-4
@@ -10,6 +10,10 @@ export function AboutUs() {
 
       md:text-left
       md:px-8
+
+      xl:px-[100px]
+      xl:flex
+      xl:justify-between
     ">
       <h2 className="
         font-medium
@@ -17,8 +21,13 @@ export function AboutUs() {
         mb-6
 
         md:max-w-[392px]
+
       ">Spetest. Jåspest. Dot. Svenna sitt liv. </h2>
-      <p className="text-lg/[32px]">
+      <p className="
+        text-lg/[32px]
+
+        xl:max-w-[604px]        
+      ">
         Dell höbärade. Dism ding. Nefåren fanade. Gigant bel. Peryna varade. Fakoktigt fal. Lussa kvasites. Tektig. Elektroosmos. Kontrada plar. Babybio serad. Nyvida dyslogi. Asa berade. Mint ryggsäcksmodellen. Möbelhund religen. Diapapyren. Bening sapask. Seföl orertad. 
       </p>
     </section>
