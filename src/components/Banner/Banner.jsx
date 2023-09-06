@@ -51,11 +51,14 @@ export function Banner() {
           top-6
           w-[172px]
           h-[336px]
+          rounded-[75px]
+          imgshadow
 
           md:left-0
 
           xl:w-[278px]
           xl:h-[542px]
+          xl:rounded-[115px]
         ' src={bannerImg1} alt="Black Woman posing" />
         <img className='
           absolute
@@ -63,12 +66,15 @@ export function Banner() {
           top-28
           w-[172px]
           h-[336px]
+          rounded-[75px]
+          imgshadow
 
           md:right-0
           
           xl:w-[278px]
           xl:h-[542px]
           xl:top-[150px]
+          xl:rounded-[115px]
         ' src={bannerImg2} alt="Asian Woman posing" />
       </div>
       <h2 className='
