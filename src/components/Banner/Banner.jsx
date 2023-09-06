@@ -14,20 +14,13 @@ export function Banner() {
       gap-4
       items-center
 
-      md:w-[340px]
-      md:flex-wrap
-      md:h-[554px]
-      md:px-8
+      md:px-[4.5vw]
+      md:gap-0
+      md:flex-row
 
-      xl:w-fit
-      xl:max-w-[804px]
-      xl:h-fit
-      xl:min-h-[802px]
-      xl:px-[100px]
-      xl:pl-[7vw]
+      xl:px-[7vw]
       xl:gap-6
       xl:justify-center
-      xl:items-start
     '>
       <div className='
         relative
@@ -36,14 +29,10 @@ export function Banner() {
         box-border
 
         md:order-2
-        md:mr-0
-        md:absolute
-        md:right-8
-        md:w-[344px]
+        md:m-auto
 
         xl:w-[504px]
         xl:h-[692px]
-        md:right-[6.5vw]
       '>
         <img className='
           absolute
@@ -77,20 +66,32 @@ export function Banner() {
           xl:rounded-[115px]
         ' src={bannerImg2} alt="Asian Woman posing" />
       </div>
-      <h2 className='
-        font-medium
-        text-40p/[48px]
+      <div className='
+        flex
+        flex-col
+        gap-4
+        items-center
+        
+        md:w-[44vw]
 
-        xl:text-[86px]/[100px]
-      '>Lörem <span className='text-blue'>ipsum</span> sars rigisk.</h2>
-      <p className='
-        leading-8
-        text-invblack
-        capitalize
+        xl:w-[604px]
+        xl:gap-8
       '>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and.
-      </p>
-      <Input />
+        <h2 className='
+          font-medium
+          text-40p/[48px]
+
+          xl:text-[86px]/[100px]
+        '>Lörem <span className='text-blue'>ipsum</span> sars rigisk.</h2>
+        <p className='
+          leading-8
+          text-invblack
+          capitalize
+        '>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and.
+        </p>
+        <Input />
+      </div>
     </section>
   );
 }

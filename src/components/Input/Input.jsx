@@ -6,12 +6,13 @@ import Button from 'components/Button';
 
 export function Input() {
   return (
-    <div className="flex gap-2.5 xl:justify-start">
+    <div className="flex gap-2.5 xl:justify-start w-full">
       <input className="
         bg-lightgray
         text-darkgray
         rounded-3xl
         p-4
+        w-full
 
         xl:min-w-[392px]
       " type="text" placeholder="Infrara Favis." />
