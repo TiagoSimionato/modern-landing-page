@@ -12,7 +12,6 @@ module.exports = {
       'lightgray'  : '#F5F5F5',
       'darkgray'   : '#565656',
       'buttonbg'   : '#E5EBFF',
-      'partnersbg' : '#FAFAFA',
       'inv'        : '#FAFAFA00',
       'invblack'   : 'rgba(0, 0, 0, 0.6)',
       'invwhite'   : 'rgba(255, 255, 255, 0.90)',

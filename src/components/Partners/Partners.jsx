@@ -8,19 +8,22 @@ export function Partners() {
     <section className='
       flex
       flex-col
-      gap-3
+      items-center
       px-4
       py-72p
       text-center
-      bg-partnersbg
+      bg-[#FAFAFA]
 
       md:block
       md:text-left
       md:px-8
+      md:pb-16
 
       xl:px-[100px]
+      xl:py-20
     '>
       <h2 className="
+        w-375p
         font-medium
         text-40p/[60px]
         capitalize
@@ -28,15 +31,24 @@ export function Partners() {
         md:w-[340px]
         md:mr-0
         md:inline-block
+
+        xl:w-[286px]
       ">Lörem ipsum mös betad.</h2>
       <p className='
+        w-375p
+        mt-3
+        mb-11
         leading-7
+        text-[#252525]
 
         md:w-[340px]
         md:inline-block
+
+        xl:w-[413px]
+        xl:ml-8
+        xl:mb-14
       '>Pseudolig. Rediktisk. Blixad. Makropyng. Rebelt. Treng. Exobogoskade. Bevis. Örådisera. Vav. Posamma. Press. Tenas. Polynade. Geoment. Tesyska. Kärlekslås.</p>
       <Cards className="
-        mt-11
         flex
         flex-col
         gap-16
