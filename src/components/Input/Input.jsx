@@ -25,7 +25,7 @@ export function Input() {
 
         xl:min-w-[392px]
       `} type="text" placeholder="Infrara Favis." />
-      {window.innerWidth >= 1440 ?
+      {width >= 1440 ?
         <>
           <Button OtherStyles={`
             xl:w-[133px]

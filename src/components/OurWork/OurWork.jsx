@@ -55,7 +55,7 @@ export function OurWork() {
         </p>
       </div>
 
-      {window.innerWidth >= 768 ?
+      {width >= 768 ?
         <Carousel
           items={products}
           showConstrols={false}

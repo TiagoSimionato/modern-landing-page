@@ -10,24 +10,23 @@ export function Footer() {
       flex-col
       items-center
       gap-8
-      bg-partnersbg
-      pt-24
+      bg-[#FAFAFA]
+      pt-[95.01px]
       pb-12
 
       md:flex-row
       md:justify-between
       md:px-8
-      md:pt-[100px]
-      md:pb-[52px]
+      md:py-[100px]
 
       xl:px-[100px]
     '>
       <img src={logo} alt="Soft Everywhere" className='w-[120px]' />
       <nav>
-        <ul className='flex gap-8'>
-          <li><a href="https://www.instagram.com/" aria-label='Instagram Website'><Instagram /></a></li>
-          <li><a href="https://twitter.com/" aria-label='Twitter Website'><Twitter /></a></li>
-          <li><a href="https://www.facebook.com/" aria-label='Facebook Website'><Facebook /></a></li>
+        <ul className='flex gap-8 md:gap-4 [&>li]:w-[28px] [&>li]:h-[28px]'>
+          <li className='flex items-center justify-center'><a href="https://www.instagram.com/" aria-label='Instagram Website'><Instagram /></a></li>
+          <li className='flex items-center justify-center'><a href="https://twitter.com/" aria-label='Twitter Website'><Twitter /></a></li>
+          <li className='flex items-center justify-center'><a href="https://www.facebook.com/" aria-label='Facebook Website'><Facebook /></a></li>
         </ul>
       </nav>
     </footer>
