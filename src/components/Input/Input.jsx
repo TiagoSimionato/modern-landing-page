@@ -5,16 +5,14 @@ import phone from 'assets/images/icons/phone.svg';
 import Button from 'components/Button';
 
 export function Input() {
-  const gap = '8';
-  
   return (
-    <div className={`flex gap-[${gap}px] xl:justify-start w-full`}>
+    <div className={`flex w-full gap-2 xl:gap-8 xl:justify-start`}>
       <input className={`
         bg-lightgray
         text-darkgray
         rounded-3xl
         p-4
-        w-[calc(100% - ${gap}px)]
+        w-[calc(100% - 8px)]
 
         xl:min-w-[392px]
       `} type="text" placeholder="Infrara Favis." />

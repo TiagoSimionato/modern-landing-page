@@ -9,41 +9,51 @@ export function Commitments() {
       flex
       flex-col
       items-center
-      gap-3
+      gap-12
       text-center
       px-4
       py-72p
+      capitalize
 
       md:text-left
       md:items-start
       md:px-8
+      md:py-16
+      md:gap-14
 
+      xl:py-32
       xl:px-[100px]
       xl:flex-row
       xl:flex-wrap
       xl:gap-0
     '>
       <div className='
+        flex
+        flex-col
+        items-center
+        gap-3
+
+        md:items-start
+
         xl:order-2
         xl:w-[50%]
       '>
         <h2 className="
+          w-[200px]
           font-medium
           text-40p/[60px]
-          capitalize
 
           md:min-w-[385px]
 
-          xl:order-2
           xl:w-[50%]
           xl:shrink-0
-          xl:mb-3
         ">Devår tins bide. </h2>
         <p className="
+          w-375p
           text-lg/[32px]
           text-invblack
           
-          md:max-w-[604px]
+          md:w-[604px]
           
           xl:shrink-0
         ">
@@ -55,10 +65,10 @@ export function Commitments() {
         flex
         flex-col
         gap-12
-        mt-9
 
         md:flex-row
         md:flex-wrap
+        md:gap-y-14
         md:gap-x-[184px]
         md:[&>li>div>p]:ml-0
         md:[&>li]:min-w-[180px]
