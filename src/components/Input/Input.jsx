@@ -3,8 +3,17 @@ import {ReactComponent as Arrow} from 'assets/images/arrow-right.svg';
 import phone from 'assets/images/icons/phone.svg';
 //Components
 import Button from 'components/Button';
+import { useEffect, useState } from 'react';
 
 export function Input() {
+  const [width, setWidth] = useState(window.innerWidth);
+  //Rerender button on width change
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+  })
   return (
     <div className={`flex w-full gap-2 xl:gap-8 xl:justify-start`}>
       <input className={`

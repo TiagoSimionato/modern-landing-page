@@ -5,6 +5,7 @@ export function CarouselItem({title, subtitle, description, image, alt, style = 
     `}>
       <img className="
         inline
+        text-[#D9D9D9]
       " src={image} alt={alt} />
       
       <h3 className="

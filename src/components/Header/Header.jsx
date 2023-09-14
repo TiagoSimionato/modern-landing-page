@@ -1,4 +1,6 @@
+//Images
 import logo from 'assets/images/LOGO.png';
+//Components
 import Button from 'components/Button';
 import MenuButton from 'components/MenuButton';
 
@@ -21,10 +23,12 @@ export function Header({changeMVisibility, menuVisibility}) {
       xl:px-[100px]
       xl:py-0
       xl:h-[88px]
+      xl:justify-start
+      xl:gap-[88px]
     `}>
       <img src={logo} alt="Soft Everywhere" className='w-[87px] h-[32px] md:my-2.5' />
 
-      <MenuButton style='xl:hidden' onClick={changeMVisibility} />
+      <MenuButton style={`xl:hidden`} onClick={changeMVisibility} />
 
       <nav className={`
         ${menuVisibility}
@@ -48,6 +52,7 @@ export function Header({changeMVisibility, menuVisibility}) {
         xl:static
         xl:w-fit
         xl:pb-0
+        xl:grow
       `}>
         <ul className='
           flex
@@ -60,20 +65,20 @@ export function Header({changeMVisibility, menuVisibility}) {
           xl:flex-row
           xl:items-center
           xl:gap-10
+          xl:p-0
+          xl:justify-start
         '>
           <li><a href='#vuv'>Bende ajyvåsa.</a></li>
           <li><h3>Sutesm asonat.</h3></li>
           <li><h3>Ding pararat.</h3></li>
           <li><h3>Teleska.</h3></li>
-          <li>
+          <li className='xl:ml-auto'>
             <Button OtherStyles='
               w-[126px]
               h-[52px]
               p-0
               text-white
               font-medium
-
-              xl:ml-[363px]
             ' bg='bg-blue hover:bg-bluehover'>
               Try It Now
             </Button>
