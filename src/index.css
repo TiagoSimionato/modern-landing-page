@@ -43,7 +43,11 @@
   }
 
   .imgshadow {
-    box-shadow: 0 24px 48px -12px rgba(16, 24, 40, 0.18);
+    box-shadow: 0 32px 64px -12px rgba(16, 24, 40, 0.2);
+  }
+
+  .imgshadowxl {
+    box-shadow: 0 32px 64px -12px rgba(16, 24, 40, 0.4);
   }
 
   .headerBorder {

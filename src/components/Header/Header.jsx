@@ -14,6 +14,7 @@ export function Header({changeMVisibility, menuVisibility}) {
       top-0
       z-10
       bg-invwhite
+      backdrop-blur
 
       md:px-8
 

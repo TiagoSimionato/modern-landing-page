@@ -2,9 +2,10 @@ export function Button({children, OtherStyles, bg = '', onClick, label}) {
   return (
     <button className={`
       inline
-      rounded-full
+      rounded-[70px]
       w-16
-      h-16 flex
+      h-[62px]
+      flex
       items-center
       justify-center
       ${bg}
