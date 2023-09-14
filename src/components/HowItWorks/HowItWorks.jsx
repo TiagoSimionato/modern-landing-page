@@ -12,31 +12,45 @@ export function HowItWorks() {
       flex
       flex-col
       items-center
-      gap-8
       px-4
-      py-72p
+      pt-72p
+      pb-[63.83px]
       text-center
 
       md:text-left
       md:items-start
       md:px-8
+      md:py-16
 
+      xl:py-32
       xl:px-[100px]
-      xl:max-h-[1400px]
+      xl:max-h-[1300px]
       xl:flex-wrap
     ">
       <picture className="
         md:order-1
-        md:h-[476px]
+        md:h-[376px]
         md:w-[499px]
+        md:mb-16
 
         xl:w-[50%]
       ">
         <source media="(min-width: 768px)" srcSet={benefitsImg} />
-        <img src={benefitsImgMobile} alt="Drawing with four buildings in ascending order" />
+        <img src={benefitsImgMobile} alt="Drawing with four buildings in ascending order" className='text-[#D9D9D9]' />
       </picture>
 
-      <div className="md:self-start xl:w-[50%]">
+      <div className="
+        mt-8
+        mb-10
+        flex
+        flex-col
+        gap-3
+        
+        md:self-start
+        md:mt-0
+        
+        xl:w-[50%]
+      ">
         <h2 className="
           text-40p
           font-medium
@@ -64,7 +78,8 @@ export function HowItWorks() {
         md:flex-row
         md:flex-wrap
         md:[&>li>div>img]:m-0
-        md:gap-20
+        md:gap-x-8
+        md:gap-y-13
 
         xl:w-[50%]
         xl:max-w-[840px]
