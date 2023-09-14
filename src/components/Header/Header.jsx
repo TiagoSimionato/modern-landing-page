@@ -5,36 +5,38 @@ import MenuButton from 'components/MenuButton';
 export function Header({changeMVisibility, menuVisibility}) {
   return (
     <header className={`
-      bg-invwhite
       flex
+      py-[18px]
+      px-4
       items-center
       justify-between
-      px-4
-      py-7
       sticky
       top-0
       z-10
+      bg-invwhite
 
       md:px-8
 
       xl:px-[100px]
-      xl:py-3
+      xl:py-0
+      xl:h-[88px]
     `}>
-      <img src={logo} alt="Soft Everywhere" className='w-[87px]' />
+      <img src={logo} alt="Soft Everywhere" className='w-[87px] h-[32px] md:my-2.5' />
 
       <MenuButton style='xl:hidden' onClick={changeMVisibility} />
 
       <nav className={`
         ${menuVisibility}
-        fixed
-        top-[86px]
-        right-4
+        flex
+        flex-col
         w-[343px]
+        fixed
+        top-[68px]
+        right-4
         bg-white
         pb-4
-        font-medium
         capitalize
-        rounded
+        rounded-lg
         bshadow2
         headerBorder
 
@@ -49,15 +51,32 @@ export function Header({changeMVisibility, menuVisibility}) {
         <ul className='
           flex
           flex-col
+          justify-around
+          h-[376px]
+          pl-6
 
+          xl:h-fit
           xl:flex-row
           xl:items-center
+          xl:gap-10
         '>
-          <li className='p-6 xl:py-0'><a href='#vuv'>Bende ajyvåsa.</a></li>
-          <li className='p-6 xl:py-0'><h3>Sutesm asonat.</h3></li>
-          <li className='p-6 xl:py-0'><h3>Ding pararat.</h3></li>
-          <li className='p-6 xl:py-0'><h3>Teleska.</h3></li>
-          <li className='px-6 py-2.5'><Button OtherStyles='w-[126px] h-[52px] p-0 text-white xl:ml-[328px]' bg='bg-blue hover:bg-bluehover'>Try It Now</Button></li>
+          <li><a href='#vuv'>Bende ajyvåsa.</a></li>
+          <li><h3>Sutesm asonat.</h3></li>
+          <li><h3>Ding pararat.</h3></li>
+          <li><h3>Teleska.</h3></li>
+          <li>
+            <Button OtherStyles='
+              w-[126px]
+              h-[52px]
+              p-0
+              text-white
+              font-medium
+
+              xl:ml-[363px]
+            ' bg='bg-blue hover:bg-bluehover'>
+              Try It Now
+            </Button>
+          </li>
         </ul>
       </nav>
     </header>

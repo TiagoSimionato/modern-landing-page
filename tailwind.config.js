@@ -15,7 +15,7 @@ module.exports = {
       'partnersbg' : '#FAFAFA',
       'inv'        : '#FAFAFA00',
       'invblack'   : 'rgba(0, 0, 0, 0.6)',
-      'invwhite'   : 'rgba(255, 255, 255, 0.95)',
+      'invwhite'   : 'rgba(255, 255, 255, 0.90)',
     },
     fontFamily: {
       'poppings': 'Poppins , sans-serif',
