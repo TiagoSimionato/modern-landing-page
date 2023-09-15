@@ -74,4 +74,8 @@
     text-overflow: '';
     background: url("assets/images/icons/selectDown.svg") no-repeat right #ffffff;
   }
+
+  .logo {
+    font-family: Helvetica, sans-serif;
+  }
 }

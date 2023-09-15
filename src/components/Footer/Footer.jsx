@@ -1,7 +1,7 @@
-import logo from 'assets/images/LOGO.png';
 import {ReactComponent as Facebook} from 'assets/images/icons/facebook.svg';
 import {ReactComponent as Instagram} from 'assets/images/icons/instagram.svg';
 import {ReactComponent as Twitter} from 'assets/images/icons/twitter.svg';
+import Logo from 'components/Logo';
 
 export function Footer() {
   return (
@@ -21,7 +21,7 @@ export function Footer() {
 
       xl:px-[100px]
     '>
-      <img src={logo} alt="Soft Everywhere" className='w-[120px]' />
+      <Logo scale={'scale-125'}/>
       <nav>
         <ul className='flex gap-8 md:gap-4 [&>li]:w-[28px] [&>li]:h-[28px]'>
           <li className='flex items-center justify-center'><a href="https://www.instagram.com/" aria-label='Instagram Website'><Instagram /></a></li>

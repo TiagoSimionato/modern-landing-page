@@ -1,7 +1,6 @@
-//Images
-import logo from 'assets/images/LOGO.png';
 //Components
 import Button from 'components/Button';
+import Logo from 'components/Logo';
 import MenuButton from 'components/MenuButton';
 
 export function Header({changeMVisibility, menuVisibility}) {
@@ -26,7 +25,7 @@ export function Header({changeMVisibility, menuVisibility}) {
       xl:justify-start
       xl:gap-[88px]
     `}>
-      <img src={logo} alt="Soft Everywhere" className='w-[87px] h-[32px] md:my-2.5' />
+      <Logo />
 
       <MenuButton style={`xl:hidden`} onClick={changeMVisibility} />
 
