@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -64,5 +64,14 @@
     visibility: visible;
     display: inline;
     @apply bg-buttonbg;
+  }
+
+  .helpSelect select {
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background: url("assets/images/icons/selectDown.svg") no-repeat right #ffffff;
   }
 }

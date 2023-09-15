@@ -15,7 +15,8 @@ export function Carousel({
     alt             = 'alt',
     showConstrols   = true,
     style,
-    cardStyle
+    cardStyle,
+    activeCardStyle = ''
   }) {
   const enabledButtonStyle = 'bg-blue';
   const disabledButtonStyle = 'bg-buttonbg';
@@ -77,7 +78,6 @@ export function Carousel({
       setActiveItem(newActiveItem);
     }
   }
-
   return (
     <div className="
       relative
@@ -103,20 +103,34 @@ export function Carousel({
       `}
       onScroll={(event) => updateButton(event.target)}
       ref={ul}>
-        {items.map(item =>
-          <CarouselItem
+        {items.map(item =>{
+          const itemStyle = item.id === (activeItem + 1) && activeCardStyle !== '' ? activeCardStyle : cardStyle;
+          console.log('itemAtivo:' + activeItem);
+          console.log('itemId: ' + item.id);          
+          return <CarouselItem
             key={item.id}
             title={item[title]}
             subtitle={item[subtitle]}
             description={item[description]}
             image={item[image]}
             alt={item[alt]}
-            style={cardStyle}
+            style={itemStyle}
           />
-        )}
+        })}
       </ul>
       {showConstrols ?
-        <div className='px-4 py-6 flex justify-end gap-6'>
+        <div className='
+          pt-6
+          flex
+          justify-end
+          gap-6
+          relative
+          left-4
+        
+          md:left-8
+          md:pt-[49px]
+          md:gap-5
+        '>
           <Button OtherStyles={leftButton} onClick={scrollLeft} label='Scroll Carousel Left'>
             {leftButtonEnabled ? <EnabledArrowRight className='rotate' /> :  <DisabledArrowLeft />}
           </Button>

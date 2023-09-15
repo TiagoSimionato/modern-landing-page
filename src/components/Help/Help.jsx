@@ -23,10 +23,10 @@ export function Help() {
         font-semibold
         w-full
         bshadow
-        p-6
         bg-white
+        helpSelect
       ">
-        <select className="w-full select-arrow" name="" id="faq">
+        <select className="w-full select-arrow p-6" name="" id="faq">
           <option className="font-semibold" value="">Accordion title</option>
           <option value="">Este conteúdo existe apenas para ser substituído pelo conteúdo que você precisar trabalhar. Para isso crie um componente local.</option>
         </select>
