@@ -1,4 +1,19 @@
+import { useState } from "react";
+//Images
+import arrow from 'assets/images/icons/selectDown.svg';
+
 export function Help() {
+
+  const [display, setActive] = useState('hidden');
+
+  function toggleDisplay() {
+    if (display === 'hidden') {
+      setActive('');
+    } else {
+      setActive('hidden');
+    }
+  }
+
   return (
     <section className="
       flex
@@ -18,18 +33,43 @@ export function Help() {
       md:pt-32
       md:pb-[333px]
     ">
-      <label className="font-semibold text-40p/[52px]">FAQ</label>
-      <div className="
-        font-semibold
-        w-full
-        bshadow
-        bg-white
-        helpSelect
-      ">
-        <select className="w-full select-arrow p-6" name="" id="faq">
-          <option className="font-semibold" value="">Accordion title</option>
-          <option value="">Este conteúdo existe apenas para ser substituído pelo conteúdo que você precisar trabalhar. Para isso crie um componente local.</option>
-        </select>
+      <h2 className="font-semibold text-40p/[52px]">FAQ</h2>
+      <div
+        onClick={toggleDisplay}
+        className="
+          font-semibold
+          w-full
+          bshadow
+          bg-white
+          relative
+        "
+      > {/**Select menu */}
+        <div className="
+          flex
+          justify-between
+          items-center
+          py-6
+          cursor-pointer
+        "> {/**Select btn */}
+          <span>Accordion title</span>
+          <img
+            src={arrow}
+            aria-hidden='true'
+            alt="Seta da lista de seleção"
+            className={`${display === 'hidden' ? '' : 'rotate-180'}`}
+          />
+        </div>
+
+        <ul className={`
+          ${display}
+          font-normal
+          text-[14px]/[24px]
+          text-left
+          text-[#4A4F58]
+          absolute
+        `}>
+          <li className="cursor-pointer py-6">Este conteúdo existe apenas para ser substituído pelo conteúdo que você precisar trabalhar. Para isso crie um componente local.</li>
+        </ul>
       </div>
     </section>
   );
