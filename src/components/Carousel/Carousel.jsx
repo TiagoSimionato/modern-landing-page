@@ -4,7 +4,7 @@ import {ReactComponent as EnabledArrowRight} from 'assets/images/icons/whiteArro
 //Components
 import Button from "components/Button";
 import CarouselItem from "./CarouselItem";
-import React, { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export function Carousel({
     items,
@@ -18,50 +18,20 @@ export function Carousel({
     cardStyle,
     activeCardStyle = ''
   }) {
-  const enabledButtonStyle = 'bg-blue';
+  const enabledButtonStyle  = 'bg-blue';
   const disabledButtonStyle = 'bg-buttonbg';
 
+  //Guarda os estilos atuais dos botoes
   const [leftButton, setLeftButton]   = useState(disabledButtonStyle);
   const [rightButton, setRightButton] = useState(enabledButtonStyle);
 
+  //Controla se o botão está ativo ou não para controlar qual icone de seta deve ser exibido
   const [leftButtonEnabled, setEnableLB]  = useState(false);
   const [rightButtonEnabled, setEnableRB] = useState(true);
 
-  function updateButton(element) {
-    const clientWidth          = document.documentElement.clientWidth;
-    const scrollPercentage     = element.scrollLeft / (element.scrollWidth - clientWidth);
-    const firstItemScrollWidth = clientWidth / (itemAmount * 2);
-    const lastItemScrollWidth  = clientWidth * (1 - 1 / (itemAmount * 2));
-    
-    setActiveItem(parseInt(scrollPercentage * (itemAmount - 1)));
-    
-    if (scrollPercentage <= firstItemScrollWidth / clientWidth) {
-      setLeftButton(disabledButtonStyle);
-      setEnableLB(false);
-    } else {
-      setLeftButton(enabledButtonStyle);
-      setEnableLB(true);
-    }
-    if (scrollPercentage >= lastItemScrollWidth / clientWidth) { //Calcula se a porcentagem de scroll passou do último item ativo
-      setRightButton(disabledButtonStyle);
-      setEnableRB(false);
-    } else {
-      setRightButton(enabledButtonStyle);
-      setEnableRB(true);
-    }
-  }
-
   const itemAmount = items.length;
   const [activeItem, setActiveItem] = useState(0);
-  const ul = React.useRef(null);
-
-  function scrollLeft() {
-    scrollCarousel('left');
-  }
-
-  function scrollRight() {
-    scrollCarousel('right');
-  }
+  const ul = useRef(null);
 
   function scrollCarousel(side) {
     let newActiveItem;
@@ -73,11 +43,40 @@ export function Carousel({
     const updateLeft  = side === 'left'  && newActiveItem >= 0;
     const updateRight = side === 'right' && newActiveItem < itemAmount;
     if (updateLeft || updateRight) {
-      const scrollPercentage = newActiveItem / itemAmount;
-      ul.current.scrollLeft = scrollPercentage * ul.current.scrollWidth;
+      ul.current.children[newActiveItem].scrollIntoView({'block': 'nearest', 'inline' : 'center', 'behavior' : 'smooth'});
       setActiveItem(newActiveItem);
+      updateButtons(newActiveItem);
     }
   }
+
+  function updateButtons(currentItem) {
+    if (currentItem === 0) {
+      setLeftButton(disabledButtonStyle);
+      setEnableLB(false);
+    } else {
+      setLeftButton(enabledButtonStyle);
+      setEnableLB(true);
+    }
+    if (currentItem === (itemAmount - 1)) {
+      setRightButton(disabledButtonStyle);
+      setEnableRB(false);
+    } else {
+      setRightButton(enabledButtonStyle);
+      setEnableRB(true);
+    }
+  }
+  
+  useEffect(() => {
+    //Prevent Scroll. Carrossel só pode ser movido com os botões
+    ul.current.addEventListener('scroll', e => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+    ul.current.addEventListener('touchmove', e => {
+      e.preventDefault();
+    });
+  });
+  
   return (
     <div className="
       relative
@@ -101,12 +100,10 @@ export function Carousel({
         no-scrollbar
         ${style}
       `}
-      onScroll={(event) => updateButton(event.target)}
+      id='lista'
       ref={ul}>
         {items.map(item =>{
-          const itemStyle = item.id === (activeItem + 1) && activeCardStyle !== '' ? activeCardStyle : cardStyle;
-          console.log('itemAtivo:' + activeItem);
-          console.log('itemId: ' + item.id);          
+          const itemStyle = item.id === (activeItem + 1) && activeCardStyle !== '' ? activeCardStyle : cardStyle;     
           return <CarouselItem
             key={item.id}
             title={item[title]}
@@ -131,10 +128,10 @@ export function Carousel({
           md:pt-[49px]
           md:gap-5
         '>
-          <Button OtherStyles={leftButton} onClick={scrollLeft} label='Scroll Carousel Left'>
+          <Button OtherStyles={leftButton} onClick={() => {scrollCarousel('left')}} label='Scroll Carousel Left'>
             {leftButtonEnabled ? <EnabledArrowRight className='rotate' /> :  <DisabledArrowLeft />}
           </Button>
-          <Button OtherStyles={rightButton} onClick={scrollRight} label='Scroll Carousel Right'>
+          <Button OtherStyles={rightButton} onClick={() => {scrollCarousel('right')}} label='Scroll Carousel Right'>
             {rightButtonEnabled ? <EnabledArrowRight /> : <DisabledArrowLeft className='rotate' />}
           </Button>
         </div>
