@@ -8,8 +8,8 @@ function AppRoutes() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<StandardPage />}>
-        <Route index element={<Home />}></Route>
+      <Route path="*" element={<StandardPage />}>
+        <Route path="*" element={<Home />}></Route>
       </Route>
     </Routes>
     </BrowserRouter>
