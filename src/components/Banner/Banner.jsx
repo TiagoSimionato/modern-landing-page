@@ -71,7 +71,6 @@ export function Banner() {
       <div className='
         flex
         flex-col
-        items-left
         mt-8
         
         md:w-[44vw]
@@ -81,21 +80,17 @@ export function Banner() {
         <h2 className='
           font-medium
           text-40p/[48px]
-          w-[281px]
 
           xl:text-[86px]/[100px]
-          xl:w-[604px]
           xl:capitalize
         '>Lörem <span className='text-blue'>ipsum</span> sars rigisk.</h2>
         <p className='
           leading-8
           text-invblack
           capitalize
-          w-[320px]
           mt-3
           mb-6
 
-          xl:w-[604px]
           xl:mt-6
           xl:mb-8
         '>
