@@ -30,8 +30,6 @@ export function Help() {
       md:pb-[199px]
 
       xl:px-[100px]
-      md:pt-32
-      md:pb-[333px]
     ">
       <h2 className="font-semibold text-40p/[52px]">FAQ</h2>
       <div

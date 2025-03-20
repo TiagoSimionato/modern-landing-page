@@ -1,16 +1,15 @@
 export function Button({children, OtherStyles, bg = '', onClick, label}) {
   return (
     <button className={`
-      inline
+      flex
       rounded-[70px]
       w-16
       h-[62px]
-      flex
       items-center
       justify-center
       ${bg}
       ${OtherStyles}
-    `} onClick={(event) => onClick(event)} aria-label={label}>
+    `} onClick={onClick} aria-label={label}>
       {children}
     </button>
   );
