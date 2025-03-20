@@ -2,8 +2,19 @@
 import Button from 'components/Button';
 import Logo from 'components/Logo';
 import MenuButton from 'components/MenuButton';
+import { useState } from 'react';
 
-export function Header({changeMVisibility, menuVisibility}) {
+export function Header() {
+  const [menuVisibility, setMVisibility] = useState('hidden');
+
+  function changeMVisibility() {
+    if (menuVisibility === 'hidden') {
+      setMVisibility('');
+    } else {
+      setMVisibility('hidden');
+    }
+  }
+
   return (
     <header className={`
       flex
