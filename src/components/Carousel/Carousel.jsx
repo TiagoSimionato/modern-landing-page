@@ -1,7 +1,5 @@
-//Images
-import {ReactComponent as DisabledArrowLeft} from 'assets/images/icons/grayArrowLeft.svg'
-import {ReactComponent as EnabledArrowRight} from 'assets/images/icons/whiteArrowRight.svg'
-//Components
+import { ReactComponent as DisabledArrowLeft } from 'assets/images/icons/grayArrowLeft.svg';
+import { ReactComponent as EnabledArrowRight } from 'assets/images/icons/whiteArrowRight.svg';
 import Button from "components/Button";
 import CarouselItem from "./CarouselItem";
 import { useState, useRef, useEffect } from 'react';
@@ -21,16 +19,15 @@ export function Carousel({
   const enabledButtonStyle  = 'bg-blue';
   const disabledButtonStyle = 'bg-buttonbg';
 
-  //Guarda os estilos atuais dos botoes
   const [leftButton, setLeftButton]   = useState(disabledButtonStyle);
   const [rightButton, setRightButton] = useState(enabledButtonStyle);
 
-  //Controla se o botão está ativo ou não para controlar qual icone de seta deve ser exibido
   const [leftButtonEnabled, setEnableLB]  = useState(false);
   const [rightButtonEnabled, setEnableRB] = useState(true);
 
   const itemAmount = items.length;
   const [activeItem, setActiveItem] = useState(0);
+  const [clientX, setClientX] = useState(0);
   const ul = useRef(null);
 
   function scrollCarousel(side) {
@@ -67,14 +64,11 @@ export function Carousel({
   }
   
   useEffect(() => {
-    //Prevent Scroll. Carrossel só pode ser movido com os botões
-    ul.current.addEventListener('scroll', e => {
+    const preventDefault = (e) => {
       e.preventDefault();
-      e.stopPropagation();
-    });
-    ul.current.addEventListener('touchmove', e => {
-      e.preventDefault();
-    });
+    };
+    ul.current.addEventListener('touchstart', preventDefault);
+    ul.current.addEventListener('touchend', preventDefault);
   });
   
   return (
@@ -100,6 +94,12 @@ export function Carousel({
         no-scrollbar
         ${style}
       `}
+      onTouchStart={(e) => {
+        setClientX(e.touches[0].clientX);
+      }}
+      onTouchEnd={(e) => {
+        clientX > e.changedTouches[0].clientX ? scrollCarousel('right') : scrollCarousel('left');
+      }}
       id='lista'
       ref={ul}>
         {items.map(item =>{

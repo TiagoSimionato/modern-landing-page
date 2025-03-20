@@ -47,6 +47,7 @@ export function Testimonial() {
 
       xl:px-[100px]
       xl:py-32
+      overflow-x-hidden
     ">
       <h2 className="
         text-40p
