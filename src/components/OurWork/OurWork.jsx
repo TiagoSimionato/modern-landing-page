@@ -34,6 +34,7 @@ export function OurWork() {
       xl:py-32
       xl:text-center
       xl:gap-15
+      overflow-x-hidden
     ">
       <div>
         <h2 className="

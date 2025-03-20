@@ -65,7 +65,9 @@ export function Carousel({
   
   useEffect(() => {
     const preventDefault = (e) => {
-      e.preventDefault();
+      if (showConstrols) {
+        e.preventDefault();
+      }
     };
     ul.current.addEventListener('touchstart', preventDefault);
     ul.current.addEventListener('touchend', preventDefault);
@@ -95,10 +97,12 @@ export function Carousel({
         ${style}
       `}
       onTouchStart={(e) => {
-        setClientX(e.touches[0].clientX);
+        showConstrols && setClientX(e.touches[0].clientX);
       }}
       onTouchEnd={(e) => {
-        clientX > e.changedTouches[0].clientX ? scrollCarousel('right') : scrollCarousel('left');
+        if (showConstrols) {
+          clientX > e.changedTouches[0].clientX ? scrollCarousel('right') : scrollCarousel('left');
+        }
       }}
       id='lista'
       ref={ul}>
